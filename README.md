@@ -31,6 +31,11 @@ If you want to use an actual XML object, load the XML using any method you'd lik
 
 After loading the file, you can access layers, properties, and more from the returned TiledMap. Check out the TiledMap.as file's documentation for all attributes and functions.
 
+Example
+-------
+
+To see an example of Tiled Reader being used, check out the [Axelite Moon](https://github.com/arkeus/axelite-moon "Axelite Moon") project.
+
 Support
 -------
 
