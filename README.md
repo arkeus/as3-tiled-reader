@@ -25,7 +25,7 @@ If you choose to use an embedded file, embed the map as follows:
 You can then load, and parse the map file as follows:
 
     var reader:TiledReader = new TiledReader;
-    var map:TiledMap = reader:TiledReader.loadFromEmbedded(WORLD);
+    var map:TiledMap = reader.loadFromEmbedded(WORLD);
 
 If you want to use an actual XML object, load the XML using any method you'd like (internally or externally), and simple use the loadFromXML function on TiledReader.
 
