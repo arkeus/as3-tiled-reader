@@ -10,7 +10,7 @@ package io.arkeus.tiled {
 	public class TiledLayers {
 		/** The vector of layers in order from bottom to top. */
 		public var layers:Vector.<TiledLayer>;
-		
+
 		public function TiledLayers() {
 			layers = new Vector.<TiledLayer>;
 		}
@@ -41,7 +41,7 @@ package io.arkeus.tiled {
 		public function getVisibleLayers():Vector.<TiledLayer> {
 			return layers.filter(function(el:TiledLayer, i:int, arr:Vector.<TiledLayer>):Boolean { return el.visible; });
 		}
-		
+
 		/**
 		 * Returns a vector of all tile layers in order from bottom to top.
 		 * 
@@ -50,7 +50,16 @@ package io.arkeus.tiled {
 		public function getTileLayers():Vector.<TiledLayer> {
 			return layers.filter(function(el:TiledLayer, i:int, arr:Vector.<TiledLayer>):Boolean { return el is TiledTileLayer; });
 		}
-		
+
+		/**
+		 * Returns a vector of all object layers in order from bottom to top.
+		 *
+		 * @return The vector of all object layers.
+		 */
+		public function getObjectLayers():Vector.<TiledLayer> {
+			return layers.filter(function(el:TiledLayer, i:int, arr:Vector.<TiledLayer>):Boolean { return el is TiledObjectLayer; });
+		}
+
 		/**
 		 * Returns the number of layers in the map.
 		 * 
