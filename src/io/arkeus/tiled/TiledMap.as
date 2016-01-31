@@ -51,7 +51,7 @@ package io.arkeus.tiled {
 			// between them can be very important. WHY BJORN, WHY?
 			var elements:XMLList = tmx.children();
 			for (var i:uint = 0; i < elements.length(); i++) {
-				var name:QName = (elements[i] as XML).name();
+				var name:QName = (elements[i] as XML).name() as QName;
 				if (name.localName == "layer") {
 					layers.addLayer(new TiledTileLayer(elements[i]));
 				} else if (name.localName == "objectgroup") {
