@@ -93,6 +93,9 @@ package io.arkeus.tiled {
 		 */
 		private static function byteArrayToMapData(data:ByteArray, mapWidth:uint):Array {
 			var map:Array = [], row:Array = [];
+
+			data.position = 0;
+
 			while (data.position < data.length) {
 				if (row.length == mapWidth) {
 					map.push(row);
